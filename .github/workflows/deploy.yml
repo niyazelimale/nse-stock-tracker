@@ -7,15 +7,20 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # Use a Linux environment
+    
+    # --- THIS IS THE FIX ---
+    # Grant the GITHUB_TOKEN permissions to write to the repository.
+    permissions:
+      contents: write
+    # -----------------------
+
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3 # Step 1: Get our code from the repo
 
       - name: Build 🛠️
         run: |
-          # Step 2: This is our "build" step.
-          # We find the placeholder __API_KEY__ in script.js and replace it
-          # with the actual key from GitHub Secrets.
+          # Step 2: Replace the placeholder with the actual API key.
           sed -i "s|__API_KEY__|${{ secrets.FINNHUB_API_KEY }}|g" script.js
           echo "Build complete. API Key has been injected."
       
