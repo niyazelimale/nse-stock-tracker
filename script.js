@@ -1,7 +1,7 @@
 // --- CONFIGURATION ---
 // IMPORTANT: We will replace 'd1fa7l1r01qpc737jm7gd1fa7l1r01qpc737jm80' with our actual key during the CI/CD process.
 const API_KEY = 'd1fa7l1r01qpc737jm7gd1fa7l1r01qpc737jm80'; 
-const STOCKS_TO_TRACK = ['RELIANCE.NS', 'TCS.NS', 'HDFCBANK.NS', 'INFY.NS', 'ICICIBANK.NS', 'SBIN.NS'];
+const STOCKS_TO_TRACK = ['NVDA', 'INTC', 'QCOM', 'AAPL', 'MSFT', 'RELIANCE.NS', 'TCS.NS', 'HDFCBANK.NS', 'INFY.NS', 'ICICIBANK.NS', 'SBIN.NS'];
 
 // --- DOM ELEMENTS ---
 const stockContainer = document.getElementById('stock-container');
