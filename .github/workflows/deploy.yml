@@ -1,0 +1,26 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ] # This workflow runs on pushes to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # Use a Linux environment
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3 # Step 1: Get our code from the repo
+
+      - name: Build 🛠️
+        run: |
+          # Step 2: This is our "build" step.
+          # We find the placeholder __API_KEY__ in script.js and replace it
+          # with the actual key from GitHub Secrets.
+          sed -i "s|__API_KEY__|${{ secrets.FINNHUB_API_KEY }}|g" script.js
+          echo "Build complete. API Key has been injected."
+      
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3 # Step 3: Use a pre-made action to deploy
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: . # Deploy the root directory (where index.html is)
