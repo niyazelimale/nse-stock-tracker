@@ -50,7 +50,7 @@ function displayStockData(symbol, data) {
 
     card.innerHTML = `
         <div class="stock-symbol">${symbol.replace('.NS', '')}</div>
-        <div class="stock-price">₹${data.c.toFixed(2)}</div>
+        <div class="stock-price">\$${data.c.toFixed(2)}</div>
         <div class="stock-change ${changeClass}">
             ${sign}${change.toFixed(2)} (${sign}${percentChange.toFixed(2)}%)
         </div>

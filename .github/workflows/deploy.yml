@@ -8,11 +8,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest # Use a Linux environment
     
-    # --- THIS IS THE FIX ---
     # Grant the GITHUB_TOKEN permissions to write to the repository.
     permissions:
       contents: write
-    # -----------------------
 
     steps:
       - name: Checkout 🛎️
