@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSE Stock Price Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>NSE Stock Price Tracker</h1>
+        <p>Prices update automatically every minute.</p>
+        <p id="last-updated">Last Updated: --</p>
+    </header>
+
+    <main id="stock-container">
+        <!-- Stock cards will be inserted here by JavaScript -->
+        <div class="loading">Loading stock data...</div>
+    </main>
+    
+    <footer>
+        <p>Data provided by <a href="https://finnhub.io" target="_blank">Finnhub.io</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
