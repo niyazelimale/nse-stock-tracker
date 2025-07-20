@@ -1,7 +1,7 @@
 // --- CONFIGURATION ---
 // IMPORTANT: We will replace 'd1fa7l1r01qpc737jm7gd1fa7l1r01qpc737jm80' with our actual key during the CI/CD process.
 const API_KEY = 'd1fa7l1r01qpc737jm7gd1fa7l1r01qpc737jm80'; 
-const STOCKS_TO_TRACK = ['NVDA', 'INTC', 'QCOM', 'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA', 'AMD'] 
+const STOCKS_TO_TRACK = ['NVDA', 'INTC', 'QCOM', 'AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'TSLA', 'AMD', 'NXPI'] 
 
 // --- DOM ELEMENTS ---
 const stockContainer = document.getElementById('stock-container');
